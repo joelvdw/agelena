@@ -1,27 +1,39 @@
+/*
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ * Copyright (C) 2020  VON DER WEID Joël
+ *
+ * This file is part of Agelena.
+ *
+ * Agelena is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Agelena is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+
 package ch.hepia.agelena
 
 import android.content.Context
-import android.content.Intent
-import android.content.IntentFilter
 import android.content.pm.PackageManager
 import android.content.res.Resources
 import android.os.Bundle
 import android.util.Log
 import ch.hepia.agelena.bluetooth.BLEManager
-import ch.hepia.agelena.bluetooth.MessageService
 import ch.hepia.agelena.db.FileManager
 import ch.hepia.agelena.db.SQLite
 import ch.hepia.agelena.message.Message
 import ch.hepia.agelena.message.MessageManager
 import ch.hepia.agelena.service.AgelenaService
-import ch.hepia.agelena.service.BackReceiver
 import ch.hepia.agelena.service.FrontReceiver
 import ch.hepia.agelena.service.WorkType
-import ch.hepia.agelena.utils.ExchangeKeyPair
 import ch.hepia.agelena.utils.MessageKeyPair
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 import java.lang.Exception
 import java.lang.IllegalStateException
 import java.security.PublicKey
