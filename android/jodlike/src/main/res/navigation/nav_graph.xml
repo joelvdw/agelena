@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/blankFragment">
+
+    <fragment
+        android:id="@+id/Home"
+        android:name="ch.hepia.jodlike.ui.HomeFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_Home_to_FirstLaunch"
+            app:destination="@id/FirstLaunch"
+            app:popUpTo="@id/FirstLaunch"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_Home_to_messagesFragment"
+            app:destination="@id/messagesFragment" />
+        <action
+            android:id="@+id/action_Home_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_Home_to_allChannelsFragment"
+            app:destination="@id/allChannelsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/FirstLaunch"
+        android:name="ch.hepia.jodlike.ui.FirstLaunchFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_launch">
+        <action
+            android:id="@+id/action_FirstLaunch_to_blankFragment"
+            app:destination="@id/blankFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/blankFragment"
+        android:name="ch.hepia.jodlike.ui.BlankFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_blank">
+        <action
+            android:id="@+id/action_blankFragment_to_FirstLaunch"
+            app:destination="@id/FirstLaunch"
+            app:popUpTo="@id/FirstLaunch"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_blankFragment_to_Home"
+            app:destination="@id/Home"
+            app:popUpTo="@id/Home"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/messagesFragment"
+        android:name="ch.hepia.jodlike.ui.MessagesFragment"
+        android:label="fragment_messages"
+        tools:layout="@layout/fragment_messages" >
+        <action
+            android:id="@+id/action_messagesFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="ch.hepia.jodlike.ui.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/allChannelsFragment"
+        android:name="ch.hepia.jodlike.ui.AllChannelsFragment"
+        android:label="fragment_all_channels"
+        tools:layout="@layout/fragment_all_channels" />
+</navigation>

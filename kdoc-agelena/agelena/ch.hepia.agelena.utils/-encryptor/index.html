@@ -1,0 +1,58 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Encryptor - agelena</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">agelena</a>&nbsp;/&nbsp;<a href="../index.html">ch.hepia.agelena.utils</a>&nbsp;/&nbsp;<a href="./index.html">Encryptor</a><br/>
+<br/>
+<h1>Encryptor</h1>
+<code><span class="keyword">object </span><span class="identifier">Encryptor</span></code>
+<p>Utility object that encrypt and decrypt data</p>
+<p>Use AES for symmetric encryption and RSA for asymmetric encryption</p>
+<p><strong>Since</strong><br/>
+0.3</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="decrypt-asymmetric.html">decryptAsymmetric</a></h4>
+</td>
+<td>
+<p>Decrypt <a href="decrypt-asymmetric.html#ch.hepia.agelena.utils.Encryptor$decryptAsymmetric(java.security.PrivateKey, kotlin.ByteArray)/data">data</a> using the private <a href="decrypt-asymmetric.html#ch.hepia.agelena.utils.Encryptor$decryptAsymmetric(java.security.PrivateKey, kotlin.ByteArray)/key">key</a> and RSA algorithm</p>
+<code><span class="keyword">fun </span><span class="identifier">decryptAsymmetric</span><span class="symbol">(</span><span class="identifier" id="ch.hepia.agelena.utils.Encryptor$decryptAsymmetric(java.security.PrivateKey, kotlin.ByteArray)/key">key</span><span class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/security/PrivateKey.html"><span class="identifier">PrivateKey</span></a><span class="symbol">, </span><span class="identifier" id="ch.hepia.agelena.utils.Encryptor$decryptAsymmetric(java.security.PrivateKey, kotlin.ByteArray)/data">data</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="decrypt-symmetric.html">decryptSymmetric</a></h4>
+</td>
+<td>
+<p>Decrypt <a href="decrypt-symmetric.html#ch.hepia.agelena.utils.Encryptor$decryptSymmetric(javax.crypto.SecretKey, kotlin.random.Random, kotlin.ByteArray)/data">data</a> using the <a href="decrypt-symmetric.html#ch.hepia.agelena.utils.Encryptor$decryptSymmetric(javax.crypto.SecretKey, kotlin.random.Random, kotlin.ByteArray)/key">key</a> and AES algorithm</p>
+<code><span class="keyword">fun </span><span class="identifier">decryptSymmetric</span><span class="symbol">(</span><span class="identifier" id="ch.hepia.agelena.utils.Encryptor$decryptSymmetric(javax.crypto.SecretKey, kotlin.random.Random, kotlin.ByteArray)/key">key</span><span class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/javax/crypto/SecretKey.html"><span class="identifier">SecretKey</span></a><span class="symbol">, </span><span class="identifier" id="ch.hepia.agelena.utils.Encryptor$decryptSymmetric(javax.crypto.SecretKey, kotlin.random.Random, kotlin.ByteArray)/random">random</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.random/-random/index.html"><span class="identifier">Random</span></a><span class="symbol">, </span><span class="identifier" id="ch.hepia.agelena.utils.Encryptor$decryptSymmetric(javax.crypto.SecretKey, kotlin.random.Random, kotlin.ByteArray)/data">data</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a></code>
+<p>Decrypt <a href="decrypt-symmetric.html#ch.hepia.agelena.utils.Encryptor$decryptSymmetric(javax.crypto.SecretKey, javax.crypto.spec.IvParameterSpec, java.io.InputStream)/data">data</a> stream with AES algorithm using given <a href="decrypt-symmetric.html#ch.hepia.agelena.utils.Encryptor$decryptSymmetric(javax.crypto.SecretKey, javax.crypto.spec.IvParameterSpec, java.io.InputStream)/key">key</a> and <a href="decrypt-symmetric.html#ch.hepia.agelena.utils.Encryptor$decryptSymmetric(javax.crypto.SecretKey, javax.crypto.spec.IvParameterSpec, java.io.InputStream)/iv">initialization vector</a></p>
+<code><span class="keyword">fun </span><span class="identifier">decryptSymmetric</span><span class="symbol">(</span><span class="identifier" id="ch.hepia.agelena.utils.Encryptor$decryptSymmetric(javax.crypto.SecretKey, javax.crypto.spec.IvParameterSpec, java.io.InputStream)/key">key</span><span class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/javax/crypto/SecretKey.html"><span class="identifier">SecretKey</span></a><span class="symbol">, </span><span class="identifier" id="ch.hepia.agelena.utils.Encryptor$decryptSymmetric(javax.crypto.SecretKey, javax.crypto.spec.IvParameterSpec, java.io.InputStream)/iv">iv</span><span class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/javax/crypto/spec/IvParameterSpec.html"><span class="identifier">IvParameterSpec</span></a><span class="symbol">, </span><span class="identifier" id="ch.hepia.agelena.utils.Encryptor$decryptSymmetric(javax.crypto.SecretKey, javax.crypto.spec.IvParameterSpec, java.io.InputStream)/data">data</span><span class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/io/InputStream.html"><span class="identifier">InputStream</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/6/docs/api/java/io/InputStream.html"><span class="identifier">InputStream</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encrypt-asymmetric.html">encryptAsymmetric</a></h4>
+</td>
+<td>
+<p>Encrypt <a href="encrypt-asymmetric.html#ch.hepia.agelena.utils.Encryptor$encryptAsymmetric(java.security.PublicKey, kotlin.ByteArray)/data">data</a> using the public <a href="encrypt-asymmetric.html#ch.hepia.agelena.utils.Encryptor$encryptAsymmetric(java.security.PublicKey, kotlin.ByteArray)/key">key</a> and RSA algorithm</p>
+<code><span class="keyword">fun </span><span class="identifier">encryptAsymmetric</span><span class="symbol">(</span><span class="identifier" id="ch.hepia.agelena.utils.Encryptor$encryptAsymmetric(java.security.PublicKey, kotlin.ByteArray)/key">key</span><span class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/security/PublicKey.html"><span class="identifier">PublicKey</span></a><span class="symbol">, </span><span class="identifier" id="ch.hepia.agelena.utils.Encryptor$encryptAsymmetric(java.security.PublicKey, kotlin.ByteArray)/data">data</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encrypt-symmetric.html">encryptSymmetric</a></h4>
+</td>
+<td>
+<p>Encrypt <a href="encrypt-symmetric.html#ch.hepia.agelena.utils.Encryptor$encryptSymmetric(javax.crypto.SecretKey, kotlin.random.Random, kotlin.ByteArray)/data">data</a> using the <a href="encrypt-symmetric.html#ch.hepia.agelena.utils.Encryptor$encryptSymmetric(javax.crypto.SecretKey, kotlin.random.Random, kotlin.ByteArray)/key">key</a> and AES algorithm</p>
+<code><span class="keyword">fun </span><span class="identifier">encryptSymmetric</span><span class="symbol">(</span><span class="identifier" id="ch.hepia.agelena.utils.Encryptor$encryptSymmetric(javax.crypto.SecretKey, kotlin.random.Random, kotlin.ByteArray)/key">key</span><span class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/javax/crypto/SecretKey.html"><span class="identifier">SecretKey</span></a><span class="symbol">, </span><span class="identifier" id="ch.hepia.agelena.utils.Encryptor$encryptSymmetric(javax.crypto.SecretKey, kotlin.random.Random, kotlin.ByteArray)/random">random</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.random/-random/index.html"><span class="identifier">Random</span></a><span class="symbol">, </span><span class="identifier" id="ch.hepia.agelena.utils.Encryptor$encryptSymmetric(javax.crypto.SecretKey, kotlin.random.Random, kotlin.ByteArray)/data">data</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a></code>
+<p>Encrypt <a href="encrypt-symmetric.html#ch.hepia.agelena.utils.Encryptor$encryptSymmetric(javax.crypto.SecretKey, javax.crypto.spec.IvParameterSpec, java.io.InputStream)/data">data</a> stream with AES algorithm using given <a href="encrypt-symmetric.html#ch.hepia.agelena.utils.Encryptor$encryptSymmetric(javax.crypto.SecretKey, javax.crypto.spec.IvParameterSpec, java.io.InputStream)/key">key</a> and <a href="encrypt-symmetric.html#ch.hepia.agelena.utils.Encryptor$encryptSymmetric(javax.crypto.SecretKey, javax.crypto.spec.IvParameterSpec, java.io.InputStream)/iv">initialization vector</a></p>
+<code><span class="keyword">fun </span><span class="identifier">encryptSymmetric</span><span class="symbol">(</span><span class="identifier" id="ch.hepia.agelena.utils.Encryptor$encryptSymmetric(javax.crypto.SecretKey, javax.crypto.spec.IvParameterSpec, java.io.InputStream)/key">key</span><span class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/javax/crypto/SecretKey.html"><span class="identifier">SecretKey</span></a><span class="symbol">, </span><span class="identifier" id="ch.hepia.agelena.utils.Encryptor$encryptSymmetric(javax.crypto.SecretKey, javax.crypto.spec.IvParameterSpec, java.io.InputStream)/iv">iv</span><span class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/javax/crypto/spec/IvParameterSpec.html"><span class="identifier">IvParameterSpec</span></a><span class="symbol">, </span><span class="identifier" id="ch.hepia.agelena.utils.Encryptor$encryptSymmetric(javax.crypto.SecretKey, javax.crypto.spec.IvParameterSpec, java.io.InputStream)/data">data</span><span class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/io/InputStream.html"><span class="identifier">InputStream</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/6/docs/api/java/io/InputStream.html"><span class="identifier">InputStream</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

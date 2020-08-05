@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_settings">Réglages</string>
+    <string name="permission_msg">Les permissions demandées sont nécessaires au bon fonctionnement de l\'application</string>
+    <string name="start">Commencer</string>
+    <string name="username">Ton formidable pseudo</string>
+    <string name="username_needed">Le pseudo ne peut pas être vide</string>
+    <string name="failed_start">Agelena n\'a pas réussi à démarrer</string>
+    <string name="new_channel">Créer un nouveau canal de discussion</string>
+    <string name="channel_name">Nom du canal</string>
+    <string name="create_channel">Créer</string>
+    <string name="chan_name_needed">Le nom du canal ne peut pas être vide</string>
+    <string name="send_button">Bouton d\'envoi</string>
+    <string name="your_username">Ton pseudo</string>
+    <string name="new_username">Nouveau pseudo</string>
+    <string name="save">Enregistrer</string>
+    <string name="school">HEPIA - Projet de Bachelor 2020</string>
+    <string name="all_channels">Tous les canaux</string>
+    <string name="developed">Développé par</string>
+    <string name="no_channel">Choisis un canal dans la liste de tous les canaux ou crée-en un</string>
+    <string name="about">À propos</string>
+    <string name="lang">Langues</string>
+    <string name="choose">Choisir</string>
+    <string name="activation_msg">Le Bluetooth et la localisation doivent être activés pour que l\'application fonctionne</string>
+</resources>

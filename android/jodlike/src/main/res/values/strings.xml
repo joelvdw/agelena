@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name" translatable="false">" Jodlike "</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+
+    <string name="permission_msg">Asked permissions are needed for the app to work properly</string>
+    <string name="start">Start</string>
+    <string name="username">Your awesome username</string>
+    <string name="username_needed">Username cannot be empty</string>
+    <string name="failed_start">Agelena failed to start</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="new_channel">Create a new discussion channel</string>
+    <string name="channel_name">Channel name</string>
+    <string name="create_channel">Create</string>
+    <string name="chan_name_needed">Channel name cannot be empty</string>
+    <string name="send_button">Send button</string>
+    <string name="your_username">Your username</string>
+    <string name="new_username">New username</string>
+    <string name="save">Save</string>
+    <string name="school">HEPIA - Bachelor\'s Project 2020</string>
+    <string name="name" translatable="false">Joël von der Weid</string>
+    <string name="version" translatable="false">Jodlike v1.0</string>
+    <string name="all_channels">All channels</string>
+    <string name="developed">Developed by</string>
+    <string name="no_channel">Select a channel in the all channels list or create a new one</string>
+    <string name="about">About</string>
+    <string name="lang">Languages</string>
+    <string name="en" translatable="false">English</string>
+    <string name="fr" translatable="false">Français</string>
+    <string name="choose">Choose</string>
+    <string name="activation_msg">Bluetooth and location need to be enabled to this application to work</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change this placeholder text -->
+</resources>

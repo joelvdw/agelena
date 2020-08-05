@@ -1,0 +1,61 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>MessageListener - agelena</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">agelena</a>&nbsp;/&nbsp;<a href="../index.html">ch.hepia.agelena</a>&nbsp;/&nbsp;<a href="./index.html">MessageListener</a><br/>
+<br/>
+<h1>MessageListener</h1>
+<code><span class="keyword">interface </span><span class="identifier">MessageListener</span></code>
+<p>Event listener interface for when Agelena send and receive messages</p>
+<p><strong>Since</strong><br/>
+0.1</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="on-ack-received.html">onAckReceived</a></h4>
+</td>
+<td>
+<p>Occurs when a message acknowledgement is received</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onAckReceived</span><span class="symbol">(</span><span class="identifier" id="ch.hepia.agelena.MessageListener$onAckReceived(kotlin.Int)/messageId">messageId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-broadcast-message-received.html">onBroadcastMessageReceived</a></h4>
+</td>
+<td>
+<p>Occurs when a broadcast is received</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onBroadcastMessageReceived</span><span class="symbol">(</span><span class="identifier" id="ch.hepia.agelena.MessageListener$onBroadcastMessageReceived(ch.hepia.agelena.message.Message)/message">message</span><span class="symbol">:</span>&nbsp;<a href="../../ch.hepia.agelena.message/-message/index.html"><span class="identifier">Message</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-message-failed.html">onMessageFailed</a></h4>
+</td>
+<td>
+<p>Occurs when a message couldn't be send</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onMessageFailed</span><span class="symbol">(</span><span class="identifier" id="ch.hepia.agelena.MessageListener$onMessageFailed(ch.hepia.agelena.message.Message, kotlin.Int)/message">message</span><span class="symbol">:</span>&nbsp;<a href="../../ch.hepia.agelena.message/-message/index.html"><span class="identifier">Message</span></a><span class="symbol">, </span><span class="identifier" id="ch.hepia.agelena.MessageListener$onMessageFailed(ch.hepia.agelena.message.Message, kotlin.Int)/errorCode">errorCode</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-message-received.html">onMessageReceived</a></h4>
+</td>
+<td>
+<p>Occurs when a message is received</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onMessageReceived</span><span class="symbol">(</span><span class="identifier" id="ch.hepia.agelena.MessageListener$onMessageReceived(ch.hepia.agelena.message.Message)/message">message</span><span class="symbol">:</span>&nbsp;<a href="../../ch.hepia.agelena.message/-message/index.html"><span class="identifier">Message</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-message-sent.html">onMessageSent</a></h4>
+</td>
+<td>
+<p>Occurs when a message has been sent</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onMessageSent</span><span class="symbol">(</span><span class="identifier" id="ch.hepia.agelena.MessageListener$onMessageSent(ch.hepia.agelena.message.Message)/message">message</span><span class="symbol">:</span>&nbsp;<a href="../../ch.hepia.agelena.message/-message/index.html"><span class="identifier">Message</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

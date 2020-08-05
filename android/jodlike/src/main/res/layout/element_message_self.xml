@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cdvMessage"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right"
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="1dp"
+    android:background="@drawable/bubble_background_self"
+    android:elevation="16dp"
+    android:outlineProvider="background"
+    android:paddingLeft="8dp"
+    android:paddingTop="4dp"
+    android:paddingRight="13dp"
+    android:paddingBottom="6dp">
+
+    <TextView
+        android:id="@+id/txvText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ceci est 7un mesaghe"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/primaryText"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvHour" />
+
+    <TextView
+        android:id="@+id/txvHour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="07:23"
+        android:textAlignment="textEnd"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imvSent"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginEnd="4dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/txvHour"
+        app:layout_constraintEnd_toStartOf="@+id/txvHour"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_check_24" />
+
+    <ImageView
+        android:id="@+id/imvFailed"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginEnd="4dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/txvHour"
+        app:layout_constraintEnd_toStartOf="@+id/txvHour"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_delete" />
+</androidx.constraintlayout.widget.ConstraintLayout>

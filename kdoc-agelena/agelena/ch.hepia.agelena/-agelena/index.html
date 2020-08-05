@@ -1,0 +1,271 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Agelena - agelena</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">agelena</a>&nbsp;/&nbsp;<a href="../index.html">ch.hepia.agelena</a>&nbsp;/&nbsp;<a href="./index.html">Agelena</a><br/>
+<br/>
+<h1>Agelena</h1>
+<code><span class="keyword">class </span><span class="identifier">Agelena</span></code>
+<p>Main class of the Agelena library</p>
+<p>This class permits to send and receive messages through BLE
+It works as a singleton, that's why all methods are static but require the initialization.</p>
+<p><strong>Since</strong><br/>
+0.1</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="add-device.html">addDevice</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">addDevice</span><span class="symbol">(</span><span class="identifier" id="ch.hepia.agelena.Agelena$addDevice(kotlin.Int, java.security.PublicKey)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="ch.hepia.agelena.Agelena$addDevice(kotlin.Int, java.security.PublicKey)/publicKey">publicKey</span><span class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/security/PublicKey.html"><span class="identifier">PublicKey</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-e-r-r-o-r_-b-l-e_-n-o-t_-s-u-p-p-o-r-t-e-d.html">ERROR_BLE_NOT_SUPPORTED</a></h4>
+</td>
+<td>
+<p>Bluetooth LE is not supported</p>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">ERROR_BLE_NOT_SUPPORTED</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-e-r-r-o-r_-b-l-u-e-t-o-o-t-h_-n-o-t_-e-n-a-b-l-e-d.html">ERROR_BLUETOOTH_NOT_ENABLED</a></h4>
+</td>
+<td>
+<p>Bluetooth or location (needed for BLE) is not enabled</p>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">ERROR_BLUETOOTH_NOT_ENABLED</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-e-r-r-o-r_-g-e-n-e-r-a-l.html">ERROR_GENERAL</a></h4>
+</td>
+<td>
+<p>Unknown error</p>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">ERROR_GENERAL</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-e-r-r-o-r_-i-n-v-a-l-i-d_-a-p-p_-u-u-i-d.html">ERROR_INVALID_APP_UUID</a></h4>
+</td>
+<td>
+<p>App UUID invalid or not found in app meta-data in the AndroidManifest
+(&lt;meta-data android:name="ch.hepia.agelena.APP_UUID" android:value="APP_UUID"/&gt;</p>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">ERROR_INVALID_APP_UUID</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-e-r-r-o-r_-m-i-s-s-i-n-g_-p-e-r-m-i-s-s-i-o-n-s.html">ERROR_MISSING_PERMISSIONS</a></h4>
+</td>
+<td>
+<p>One of the needed permissions is not granted</p>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">ERROR_MISSING_PERMISSIONS</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-initialized.html">isInitialized</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">isInitialized</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-started.html">isStarted</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">isStarted</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-m-e-s-s-a-g-e_-e-r-r-o-r_-i-n-v-a-l-i-d_-t-t-l.html">MESSAGE_ERROR_INVALID_TTL</a></h4>
+</td>
+<td>
+<p>Given TTL is smaller or equal to 0</p>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">MESSAGE_ERROR_INVALID_TTL</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-m-e-s-s-a-g-e_-e-r-r-o-r_-n-o-t_-s-t-a-r-t-e-d.html">MESSAGE_ERROR_NOT_STARTED</a></h4>
+</td>
+<td>
+<p>Agelena is not started</p>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">MESSAGE_ERROR_NOT_STARTED</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-m-e-s-s-a-g-e_-e-r-r-o-r_-o-u-t_-o-f_-r-a-n-g-e.html">MESSAGE_ERROR_OUT_OF_RANGE</a></h4>
+</td>
+<td>
+<p>Message received isn't in range
+Occurs only with direct messages</p>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">MESSAGE_ERROR_OUT_OF_RANGE</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-m-e-s-s-a-g-e_-e-r-r-o-r_-r-e-c-e-i-v-e-r_-e-m-p-t-y.html">MESSAGE_ERROR_RECEIVER_EMPTY</a></h4>
+</td>
+<td>
+<p>Message receiver was not found</p>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">MESSAGE_ERROR_RECEIVER_EMPTY</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-m-e-s-s-a-g-e_-e-r-r-o-r_-s-e-l-f.html">MESSAGE_ERROR_SELF</a></h4>
+</td>
+<td>
+<p>Message receiver is this device</p>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">MESSAGE_ERROR_SELF</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-m-e-s-s-a-g-e_-e-r-r-o-r_-u-n-k-n-o-w-n_-r-e-c-e-i-v-e-r.html">MESSAGE_ERROR_UNKNOWN_RECEIVER</a></h4>
+</td>
+<td>
+<p>Message encryption is enabled but receiver public key is unknown.</p>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">MESSAGE_ERROR_UNKNOWN_RECEIVER</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-p-r-o-t-o-c-o-l_-v-e-r-s-i-o-n.html">PROTOCOL_VERSION</a></h4>
+</td>
+<td>
+<p>Agelena protocol version</p>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">PROTOCOL_VERSION</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-s-u-c-c-e-s-s.html">SUCCESS</a></h4>
+</td>
+<td>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">SUCCESS</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="add-device.html">addDevice</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">addDevice</span><span class="symbol">(</span><span class="identifier" id="ch.hepia.agelena.Agelena.Companion$addDevice(kotlin.Int, java.security.PublicKey)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="ch.hepia.agelena.Agelena.Companion$addDevice(kotlin.Int, java.security.PublicKey)/publicKey">publicKey</span><span class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/security/PublicKey.html"><span class="identifier">PublicKey</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="close.html">close</a></h4>
+</td>
+<td>
+<p>Stop Agelena and free memory</p>
+<code><span class="keyword">fun </span><span class="identifier">close</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-config.html">getConfig</a></h4>
+</td>
+<td>
+<p>Return the <a href="../-config/index.html">Config</a> used during initialization</p>
+<code><span class="keyword">fun </span><span class="identifier">getConfig</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-config/index.html"><span class="identifier">Config</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-private-key.html">getPrivateKey</a></h4>
+</td>
+<td>
+<p>Return the private key used to decrypt messages</p>
+<code><span class="keyword">fun </span><span class="identifier">getPrivateKey</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/6/docs/api/java/security/PrivateKey.html"><span class="identifier">PrivateKey</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-public-key.html">getPublicKey</a></h4>
+</td>
+<td>
+<p>Return the public key that's sent to other users</p>
+<code><span class="keyword">fun </span><span class="identifier">getPublicKey</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/6/docs/api/java/security/PublicKey.html"><span class="identifier">PublicKey</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-user-i-d.html">getUserID</a></h4>
+</td>
+<td>
+<p>Return the unique ID for this device</p>
+<code><span class="keyword">fun </span><span class="identifier">getUserID</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="initialize.html">initialize</a></h4>
+</td>
+<td>
+<p>Initialize Agelena library using the given <a href="initialize.html#ch.hepia.agelena.Agelena.Companion$initialize(android.content.Context, ch.hepia.agelena.StateListener, ch.hepia.agelena.MessageListener, ch.hepia.agelena.Config)/config">config</a>, verifies permissions and enables BLE</p>
+<code><span class="keyword">fun </span><span class="identifier">initialize</span><span class="symbol">(</span><span class="identifier" id="ch.hepia.agelena.Agelena.Companion$initialize(android.content.Context, ch.hepia.agelena.StateListener, ch.hepia.agelena.MessageListener, ch.hepia.agelena.Config)/context">context</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">, </span><span class="identifier" id="ch.hepia.agelena.Agelena.Companion$initialize(android.content.Context, ch.hepia.agelena.StateListener, ch.hepia.agelena.MessageListener, ch.hepia.agelena.Config)/stateListener">stateListener</span><span class="symbol">:</span>&nbsp;<a href="../-state-listener/index.html"><span class="identifier">StateListener</span></a><span class="symbol">, </span><span class="identifier" id="ch.hepia.agelena.Agelena.Companion$initialize(android.content.Context, ch.hepia.agelena.StateListener, ch.hepia.agelena.MessageListener, ch.hepia.agelena.Config)/messageListener">messageListener</span><span class="symbol">:</span>&nbsp;<a href="../-message-listener/index.html"><span class="identifier">MessageListener</span></a><span class="symbol">, </span><span class="identifier" id="ch.hepia.agelena.Agelena.Companion$initialize(android.content.Context, ch.hepia.agelena.StateListener, ch.hepia.agelena.MessageListener, ch.hepia.agelena.Config)/config">config</span><span class="symbol">:</span>&nbsp;<a href="../-config/index.html"><span class="identifier">Config</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code>
+<p>Initialize Agelena library with default <a href="../-config/index.html">Config</a>, verifies permissions and enables BLE</p>
+<code><span class="keyword">fun </span><span class="identifier">initialize</span><span class="symbol">(</span><span class="identifier" id="ch.hepia.agelena.Agelena.Companion$initialize(android.content.Context, ch.hepia.agelena.StateListener, ch.hepia.agelena.MessageListener)/context">context</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">, </span><span class="identifier" id="ch.hepia.agelena.Agelena.Companion$initialize(android.content.Context, ch.hepia.agelena.StateListener, ch.hepia.agelena.MessageListener)/stateListener">stateListener</span><span class="symbol">:</span>&nbsp;<a href="../-state-listener/index.html"><span class="identifier">StateListener</span></a><span class="symbol">, </span><span class="identifier" id="ch.hepia.agelena.Agelena.Companion$initialize(android.content.Context, ch.hepia.agelena.StateListener, ch.hepia.agelena.MessageListener)/messageListener">messageListener</span><span class="symbol">:</span>&nbsp;<a href="../-message-listener/index.html"><span class="identifier">MessageListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="send-broadcast-message.html">sendBroadcastMessage</a></h4>
+</td>
+<td>
+<p>Send a message with this <a href="send-broadcast-message.html#ch.hepia.agelena.Agelena.Companion$sendBroadcastMessage(kotlin.collections.Map((kotlin.String, kotlin.Any)), kotlin.Int)/content">content</a> to all nearby devices and propagate to it to all their nearby devices</p>
+<code><span class="keyword">fun </span><span class="identifier">sendBroadcastMessage</span><span class="symbol">(</span><span class="identifier" id="ch.hepia.agelena.Agelena.Companion$sendBroadcastMessage(kotlin.collections.Map((kotlin.String, kotlin.Any)), kotlin.Int)/content">content</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html"><span class="identifier">Map</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="ch.hepia.agelena.Agelena.Companion$sendBroadcastMessage(kotlin.collections.Map((kotlin.String, kotlin.Any)), kotlin.Int)/ttl">ttl</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Send a <a href="send-broadcast-message.html#ch.hepia.agelena.Agelena.Companion$sendBroadcastMessage(ch.hepia.agelena.message.Message, kotlin.Int)/message">message</a> to all nearby devices and propagate to it to all their nearby devices</p>
+<code><span class="keyword">fun </span><span class="identifier">sendBroadcastMessage</span><span class="symbol">(</span><span class="identifier" id="ch.hepia.agelena.Agelena.Companion$sendBroadcastMessage(ch.hepia.agelena.message.Message, kotlin.Int)/message">message</span><span class="symbol">:</span>&nbsp;<a href="../../ch.hepia.agelena.message/-message/index.html"><span class="identifier">Message</span></a><span class="symbol">, </span><span class="identifier" id="ch.hepia.agelena.Agelena.Companion$sendBroadcastMessage(ch.hepia.agelena.message.Message, kotlin.Int)/ttl">ttl</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="send-direct-message.html">sendDirectMessage</a></h4>
+</td>
+<td>
+<p>Send a direct message to another device
+The recipient must be in range otherwise the message will fail to send</p>
+<code><span class="keyword">fun </span><span class="identifier">sendDirectMessage</span><span class="symbol">(</span><span class="identifier" id="ch.hepia.agelena.Agelena.Companion$sendDirectMessage(ch.hepia.agelena.message.Message)/message">message</span><span class="symbol">:</span>&nbsp;<a href="../../ch.hepia.agelena.message/-message/index.html"><span class="identifier">Message</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="send-message.html">sendMessage</a></h4>
+</td>
+<td>
+<p>Send a message to another device</p>
+<code><span class="keyword">fun </span><span class="identifier">sendMessage</span><span class="symbol">(</span><span class="identifier" id="ch.hepia.agelena.Agelena.Companion$sendMessage(ch.hepia.agelena.message.Message)/message">message</span><span class="symbol">:</span>&nbsp;<a href="../../ch.hepia.agelena.message/-message/index.html"><span class="identifier">Message</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-message-listener.html">setMessageListener</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setMessageListener</span><span class="symbol">(</span><span class="identifier" id="ch.hepia.agelena.Agelena.Companion$setMessageListener(ch.hepia.agelena.MessageListener)/messageListener">messageListener</span><span class="symbol">:</span>&nbsp;<a href="../-message-listener/index.html"><span class="identifier">MessageListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-state-listener.html">setStateListener</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setStateListener</span><span class="symbol">(</span><span class="identifier" id="ch.hepia.agelena.Agelena.Companion$setStateListener(ch.hepia.agelena.StateListener)/stateListener">stateListener</span><span class="symbol">:</span>&nbsp;<a href="../-state-listener/index.html"><span class="identifier">StateListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="start.html">start</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">start</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="stop.html">stop</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">stop</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

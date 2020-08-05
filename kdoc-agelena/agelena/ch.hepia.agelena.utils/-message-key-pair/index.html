@@ -1,0 +1,81 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>MessageKeyPair - agelena</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">agelena</a>&nbsp;/&nbsp;<a href="../index.html">ch.hepia.agelena.utils</a>&nbsp;/&nbsp;<a href="./index.html">MessageKeyPair</a><br/>
+<br/>
+<h1>MessageKeyPair</h1>
+<code><span class="keyword">class </span><span class="identifier">MessageKeyPair</span></code>
+<p>Encapsulation and utility class managing key pair used during message encryption</p>
+<p>Use RSA and AES algorithm</p>
+<p><strong>Since</strong><br/>
+0.3</p>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="private-key.html">privateKey</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">privateKey</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/6/docs/api/java/security/PrivateKey.html"><span class="identifier">PrivateKey</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="public-key.html">publicKey</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">publicKey</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/6/docs/api/java/security/PublicKey.html"><span class="identifier">PublicKey</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="generate-iv.html">generateIv</a></h4>
+</td>
+<td>
+<p>Generate a secure initialization vector</p>
+<code><span class="keyword">fun </span><span class="identifier">generateIv</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/6/docs/api/javax/crypto/spec/IvParameterSpec.html"><span class="identifier">IvParameterSpec</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="private-key-from-string.html">privateKeyFromString</a></h4>
+</td>
+<td>
+<p>Generate a <a href="https://docs.oracle.com/javase/6/docs/api/java/security/PrivateKey.html">PrivateKey</a> from the given <a href="private-key-from-string.html#ch.hepia.agelena.utils.MessageKeyPair.Companion$privateKeyFromString(kotlin.String)/keyString">keyString</a> in the hex string format</p>
+<code><span class="keyword">fun </span><span class="identifier">privateKeyFromString</span><span class="symbol">(</span><span class="identifier" id="ch.hepia.agelena.utils.MessageKeyPair.Companion$privateKeyFromString(kotlin.String)/keyString">keyString</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/6/docs/api/java/security/PrivateKey.html"><span class="identifier">PrivateKey</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="private-key-to-string.html">privateKeyToString</a></h4>
+</td>
+<td>
+<p>Generate a heyx encoded string from the given <a href="private-key-to-string.html#ch.hepia.agelena.utils.MessageKeyPair.Companion$privateKeyToString(java.security.PrivateKey)/key">key</a></p>
+<code><span class="keyword">fun </span><span class="identifier">privateKeyToString</span><span class="symbol">(</span><span class="identifier" id="ch.hepia.agelena.utils.MessageKeyPair.Companion$privateKeyToString(java.security.PrivateKey)/key">key</span><span class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/security/PrivateKey.html"><span class="identifier">PrivateKey</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="public-key-from-string.html">publicKeyFromString</a></h4>
+</td>
+<td>
+<p>Generate a <a href="https://docs.oracle.com/javase/6/docs/api/java/security/PublicKey.html">PublicKey</a> from the given <a href="public-key-from-string.html#ch.hepia.agelena.utils.MessageKeyPair.Companion$publicKeyFromString(kotlin.String)/keyString">keyString</a> in the hex string format</p>
+<code><span class="keyword">fun </span><span class="identifier">publicKeyFromString</span><span class="symbol">(</span><span class="identifier" id="ch.hepia.agelena.utils.MessageKeyPair.Companion$publicKeyFromString(kotlin.String)/keyString">keyString</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/6/docs/api/java/security/PublicKey.html"><span class="identifier">PublicKey</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="public-key-to-string.html">publicKeyToString</a></h4>
+</td>
+<td>
+<p>Generate a hex encoded string from the given <a href="public-key-to-string.html#ch.hepia.agelena.utils.MessageKeyPair.Companion$publicKeyToString(java.security.PublicKey)/key">key</a></p>
+<code><span class="keyword">fun </span><span class="identifier">publicKeyToString</span><span class="symbol">(</span><span class="identifier" id="ch.hepia.agelena.utils.MessageKeyPair.Companion$publicKeyToString(java.security.PublicKey)/key">key</span><span class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/security/PublicKey.html"><span class="identifier">PublicKey</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>
