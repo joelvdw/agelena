@@ -11,7 +11,6 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/agelena" />
-            <option value="$PROJECT_DIR$/jodlike" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
