@@ -257,7 +257,7 @@ Agelena SDK is separated in two parts : the client library and the background se
 
 ## Full documentation
 
-The full API documentation is accessible in HTML format in the [kdoc-agalena](kdoc-agelena) folder.
+The full API documentation is accessible in HTML format in the [kdoc-agelena](kdoc-agelena) folder.
 
 ## License
 
