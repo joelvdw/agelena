@@ -255,6 +255,10 @@ Agelena SDK is separated in two parts : the client library and the background se
 
 ![Agelena architecture](fig/architecture.png)
 
+## Full documentation
+
+The full API documentation is accessible in HTML format in the [kdoc-agalena](kdoc-agelena) folder.
+
 ## License
 
 Agelena is free software; you can redistribute it and/or modify it under the terms of the [GNU General Public License](http://www.gnu.org/licenses/gpl.html) as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
