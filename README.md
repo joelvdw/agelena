@@ -1,4 +1,4 @@
-# Agelena
+<img src="fig/agelena_logo.png" alt="agelena" width="500"/>
 
 Agelena is a communication library based on Bluetooth Low Energy. Its goal is to easily send various message types through Bluetooth LE.
 
