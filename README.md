@@ -2,7 +2,7 @@
 
 Agelena is a communication library based on Bluetooth Low Energy. Its goal is to easily send various message types through Bluetooth LE.
 
-It has been developed in Kotlin for Android devices with a Android API level >= 23.
+It has been developed in Kotlin for Android devices with an Android API level >= 23.
 
 ## Functionalities
 
@@ -12,34 +12,34 @@ Each device using Agelena is identified by a unique 32-bit identifier. Like an I
 
 ### Compression
 
-To improve data transfer debit, all messages are compressed using zlib algorithm.
+To improve data transfer debit, all messages are compressed using the zlib algorithm.
 
 ### Encryption
 
 Agelena implements two encryption systems : message encryption and session encryption.
 
 Message encryption grants data security against intermediates who could access message data during store-and-forward. It uses a combination of RSA-2048 and AES-256 algorithms to efficiently protect data with asymmetric keys. Each device has a personal private key used to decipher received messages and a public key shared to nearby devices.
-Message encryption doesn't apply on broadcast messages.
+Message encryption doesn't apply to broadcast messages.
 
 Session encryption grants data security against external sniffing attacks. It uses the AES-256 symmetric algorithm. A session between two nearby devices is created when they securely share, among others, a symmetric key during a handshake.
 
 ### Fragmentation
 
-Bluetooth LE packets being small, most messages have to be fragmented. Agelena integrates a 16-bit sequence number to message fragments for the recipient to reconstruct the original message at reception.
+Bluetooth LE packets being small, most messages have to be fragmented. Agelena integrates a 16-bit sequence number to message fragments for the recipient to reconstruct the original message at delivery.
 
 ### Store-and-Forward
 
-The advantage of Agelena library is that it'll do its best to reach message recipients. To achieve that, it implements a store-and-forward mechanism. If the recipient is not nearby the device when a message is sent, it'll store all message fragments and send them to other devices it encounters. These devices will also store fragments and propagate them to other devices until they reach their final recipient.
+The advantage of Agelena library is that it'll do its best to reach message recipients. To achieve that, it implements a store-and-forward mechanism. If the recipient is not near the device when a message is sent, it'll store all message fragments and send them to other devices it encounters. These devices will also store fragments and propagate them to other devices until they reach their final recipient.
 
-## How to use it
+## How to Use It
 
-The Agelena library has been developed with the aim of usage simplicity. Thus, the client application needs only a few lines of code to use it.
+The Agelena library has been developed with the aim of usage simplicity. Thus, the customer application only needs a few lines of code to use it.
 
-### SDK importation
+### SDK Importation
 
-There is two ways to import the SDK in an app : import the .AAR file or import the sources.
+There are two ways to import the SDK in app : import the .AAR file or import the sources.
 
-To import the .AAR file, you have to copy it in the sub folder `/libs` of the module needing Agelena.
+To import the .AAR file, you have to copy it in the subfolder `/libs` of the module needing Agelena.
 Then you have to add the following lines in the following files.
 
 In the main `build.gradle`, in the section `allprojects > repositories ` :
@@ -58,7 +58,7 @@ implementation files(’libs/agelena.aar’)
 
 
 
-To directly import the sources in a project, you have to download the `android/agelena` folder and decompress it in the folder where are located your project modules.
+To directly import the sources in a project, you have to download the `android/agelena` folder and decompress it in the folder where your project modules are located.
 Then, you have to add the following lines in the following files.
 
 In `settings.gradle` :
@@ -83,7 +83,7 @@ implementation project(’:agelena’)
 
 Either way, do not forget to synchronize Gradle at the end of all operations.
 
-After that, you have to add a metadata needed by Agelena in the `AndroidManifest` of the app. To do that, add the following line in the `application` tag :
+After that, you have to add metadata needed by Agelena in the `AndroidManifest` of the app. To do that, add the following line in the `application` tag :
 
 ```xml
 <meta-data android:name="ch.hepia.agelena.APP_UUID" android:value="[app-uuid]"/>
@@ -91,7 +91,7 @@ After that, you have to add a metadata needed by Agelena in the `AndroidManifest
 
 `[app-uuid]` must be a randomly generated UUID and be unique for each app.
 
-### Permissions
+### Permission
 
 Agelena needs some permissions to work. These permissions have to be added in the `AndroidManifest `of the app :
 
@@ -203,11 +203,11 @@ Agelena.sendMessage(msgA, Global.TTL)
 
 `setContent` allows you to send data using key-value pairs and `setData` allows you to send raw data as an `InputStream`. You can either use one of them or use them both at a time.
 
-To send broadcast messages, use `Agelena.sendBroadcastMessage`. This method doesn't need a recipient but needs a Time-To-Live corresponding to the number of intermediate devices it will reach before to stop.
+To send broadcast messages, use `Agelena.sendBroadcastMessage`. This method doesn't need a recipient but needs a Time-To-Live corresponding to the number of intermediate devices it will reach before stopping.
 
 To manage received messages, implement a `MessageListener` and give it to the `initialize` method. Its different listener methods will be called when a message is received or sent. 
 
-Example of message reception :
+Example of a message delivery :
 
 ```kotlin
 override fun onMessageReceived(message: Message) {
@@ -238,7 +238,7 @@ The second error type occurs when initialization fails. In this case, the `Agele
 | -4    | ERROR_BLE_NOT_SUPPORTED     | Current device does not support BLE                          |
 | -5    | ERROR_INVALID_APP_UUID      | `ch.hepia.agelena.APP_UUID` metadata is not present in the `AndroidManifest` or is not a valid UUID |
 
-The last error type occurs when a message fails to be send. In this case, a negative number is sent to the user through the `MessageListener#onMessageFailed` listener method according to the following table :
+The last error type occurs when a message fails to be sent. In this case, a negative number is sent to the user through the `MessageListener#onMessageFailed` listener method according to the following table :
 
 | Value | Constant name                  | Description                                                  |
 | ----- | ------------------------------ | ------------------------------------------------------------ |
@@ -251,7 +251,7 @@ The last error type occurs when a message fails to be send. In this case, a nega
 
 ## SDK architecture
 
-Agelena SDK is separated in two parts : the client library and the background service. The client part allows the user to interact with the library, and the service interacts with the Android system and the Bluetooth API. The service runs even if the app is not opened.
+Agelena SDK is separated in two parts : the client library and the background service. The client part allows the user to interact with the library, and the service interacts with the Android system and the Bluetooth API. The service runs even if the app is not open.
 
 ![Agelena architecture](fig/architecture.png)
 
@@ -265,4 +265,4 @@ Agelena is free software; you can redistribute it and/or modify it under the ter
 
 ## Further information
 
-For further information, you can contact me at [jvonderweid@gmail.com](mailto:jvonderweid@gmail.com).
+For any further information, you can contact me at [jvonderweid@gmail.com](mailto:jvonderweid@gmail.com).
